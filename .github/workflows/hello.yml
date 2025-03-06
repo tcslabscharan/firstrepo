@@ -1,0 +1,12 @@
+name: my-first-pipeline
+on:
+  push:
+    branches:
+    - main
+jobs:
+  hello:
+    name: say hello
+    runs-on: ubuntu-latest
+    steps:
+      -  name: saying hello
+      -  run: echo "hello world"
