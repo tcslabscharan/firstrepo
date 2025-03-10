@@ -1,6 +1,6 @@
 name: PR closed PipeLine
 on:
-  pull:
+  pull_request:
     branches:
       - main
     types:
