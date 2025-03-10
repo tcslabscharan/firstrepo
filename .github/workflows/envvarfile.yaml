@@ -7,8 +7,8 @@ env:
   TRAINING: "GitHub"
 jobs:
   Build:
-    - name: Saying Hello
-      runs-on: ubuntu-latest
+    name: Saying Hello
+    runs-on: ubuntu-latest
     steps:
       - name: First Job
         run: echo "Hello $Name, this is my $TRAINING"
