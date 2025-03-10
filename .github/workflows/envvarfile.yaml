@@ -1,6 +1,6 @@
 name: Env Variable job
 on:
-  workflow_dispatch:
+  push:
     - main
 env:
   NAME: "Mannu"
