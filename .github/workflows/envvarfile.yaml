@@ -16,9 +16,9 @@ jobs:
   Test:
     name: Saying Hello in Test
     runs-on: ubuntu-latest
-    - env:
-        NAME: "Charan"
-        TRAINING: "BitBucket"
+    env:
+      NAME: "Charan"
+      TRAINING: "BitBucket"
     steps:
       - name: First Job
         run: echo "Hello $NAME, this is my $TRAINING"
