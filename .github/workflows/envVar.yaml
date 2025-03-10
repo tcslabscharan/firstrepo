@@ -1,9 +1,9 @@
 name: Env Variable job
 on:
   workflow_dispatch:
-  env:
-      NAME: "Mannu"
-      TRAINING: "GitHub"
+env:
+  NAME: "Mannu"
+  TRAINING: "GitHub"
 jobs:
   Build:
     name: Saying Hello
