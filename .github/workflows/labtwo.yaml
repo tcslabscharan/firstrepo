@@ -1,0 +1,34 @@
+name: variable and parameter
+on:
+  workflow_dispatch:
+    inputs:
+      training:
+        default: "k8s_cluster"
+        description: select the deployment name
+        type: choice
+        options:
+          - dev
+          - sit
+          - uat
+          - prod
+env:
+  TRAINING: ${{ inputs.training }}  # global variable available to all jobs
+jobs:
+  hello:
+    name: Deploying in k8_cluster   
+    runs-on: ubuntu-latest 
+    env:
+      NAME: ${{ inputs.training}}  # local variable available to this job only 
+    steps:
+      - name: check out the code
+        uses: actions/checkout@v4
+      - name: Greet a user
+        run: echo "Hello $NAME! this is my $TRAINING training"
+  greeting:
+    name: greeting hello  
+    env: 
+      NAME: "KRISHNA"  # local variable available to this job only 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Greet a user
+        run: echo "Hello $NAME! this is my $TRAINING training" 
