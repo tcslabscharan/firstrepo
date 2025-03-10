@@ -11,7 +11,7 @@ jobs:
     steps:
       name: First Job
       run: echo "Hello $Name, this is my $TRAINING"
- Test:
+  Test:
     name: Saying Hello in Test
     runs-on: ubuntu-latest
     env:
