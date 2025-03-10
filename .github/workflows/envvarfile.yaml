@@ -1,6 +1,7 @@
 name: Env Variable job
 on:
   workflow_dispatch:
+    - main
 env:
   NAME: "Mannu"
   TRAINING: "GitHub"
@@ -14,9 +15,9 @@ jobs:
   Test:
     name: Saying Hello in Test
     runs-on: ubuntu-latest
-    env:
-      NAME: "Charan"
-      TRAINING: "BitBucket"
     steps:
+      - env:
+         NAME: "Charan"
+         TRAINING: "BitBucket"
       name: First Job
       run: echo "Hello $NAME, this is my $TRAINING"
