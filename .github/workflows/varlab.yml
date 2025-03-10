@@ -1,6 +1,8 @@
 name: Lab on Env Var
 on:
-  workflow_dispacth:
+  push:
+    branches:
+      - main
 env:
   JAVA_VERSION: 17
 jobs:
