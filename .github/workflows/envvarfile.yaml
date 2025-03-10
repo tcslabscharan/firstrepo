@@ -7,17 +7,17 @@ env:
   TRAINING: "GitHub"
 jobs:
   Build:
-    name: Saying Hello
-    runs-on: ubuntu-latest
+    - name: Saying Hello
+      runs-on: ubuntu-latest
     steps:
-      name: First Job
-      run: echo "Hello $Name, this is my $TRAINING"
+      - name: First Job
+        run: echo "Hello $Name, this is my $TRAINING"
   Test:
-    name: Saying Hello in Test
-    runs-on: ubuntu-latest
+    - name: Saying Hello in Test
+      runs-on: ubuntu-latest
     steps:
       - env:
          NAME: "Charan"
          TRAINING: "BitBucket"
-      name: First Job
-      run: echo "Hello $NAME, this is my $TRAINING"
+      - name: First Job
+        run: echo "Hello $NAME, this is my $TRAINING"
