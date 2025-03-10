@@ -1,0 +1,14 @@
+name: PR closed PipeLine
+on:
+  pull:
+    branches:
+      - main
+    types:
+      - closed
+jobs:
+  Build:
+    name: Build Job
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "Build is done"
+    
