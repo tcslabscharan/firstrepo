@@ -10,5 +10,5 @@ jobs:
     name: Build Job
     runs-on: ubuntu-latest
     steps:
-      run: echo "Build is done"
+      -  run: echo "Build is done"
     
