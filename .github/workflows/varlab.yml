@@ -8,13 +8,18 @@ jobs:
     name: Build Job
     runs-on: ubuntu-latest
     steps:
-      run: echo "Checkout"
-      run: echo "setting up java version to $JAVA_VERSION"
-
-  
+      - name : Checking out
+        run: echo "Checkout"
+        run: echo "setting up java version to $JAVA_VERSION" 
   Deployment:
     name: Deploy Job
     runs-on: ubuntu-latest
+    env:
+      APP_NAME: "Docker"
     steps:
-      run: echo "Checkout"
-      run: echo "Building Docker application"
+      - name : Checking out
+        run: echo "Checkout"
+      - name: Building docker app
+        run: echo "Building Docker application"
+      - name: Building docker app
+        run: echo "hello $APP_NAME"
