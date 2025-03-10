@@ -13,8 +13,8 @@ jobs:
       - name: First Job
         run: echo "Hello $Name, this is my $TRAINING"
   Test:
-    - name: Saying Hello in Test
-      runs-on: ubuntu-latest
+    name: Saying Hello in Test
+    runs-on: ubuntu-latest
     steps:
       - env:
          NAME: "Charan"
