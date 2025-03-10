@@ -1,8 +1,6 @@
 name: Env Variable job
 on:
   push:
-    branches:
-      - main
 env:
   NAME: "Mannu"
   TRAINING: "GitHub"
